@@ -1,0 +1,40 @@
+/**
+ * Copyright (C) 2020 thinh ho
+ * This file is part of 'qrmi-adapter' which is released under the MIT license.
+ * See LICENSE at the project root directory.
+ */
+
+
+plugins {
+    id 'java-library'
+    id 'maven'
+}
+
+description = 'RabbitMQ Adapter Implementation'
+
+version = '0.1'
+group = 'qrmi'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+jar {
+    manifest {
+        attributes(
+            "Name": rootProject.name,
+            "Specification-Title": "qrmi-adapter",
+            "Specification-Version": rootProject.version,
+            "Specification-Vendor": "qrmi",
+            "Implementation-Title": rootProject.name,
+            "Implementation-Version": rootProject.version,
+            "Implementation-Vendor": "me@kkdt.one"
+        )
+    }
+}
+
+
+dependencies {
+    compile("org.springframework.amqp:spring-rabbit:${springRabbitVersion}")
+}

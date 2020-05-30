@@ -1,0 +1,10 @@
+/bin/
+build/
+.gradle
+.classpath
+.project
+.settings
+.DS_Store
+.vagrant
+.idea
+out/
