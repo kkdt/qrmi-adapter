@@ -6,5 +6,7 @@
 
 rootProject.name = 'qrmi-adapter'
 
-include 'qrmi-adapter'
+include ':qrmi-adapter'
+include ':samples:stock-market'
+include ':samples:stock-listener'
 

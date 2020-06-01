@@ -1,0 +1,11 @@
+apply plugin: 'application'
+
+mainClassName = "qrmi.adapter.samples.StockListenerApplication"
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-amqp:${springRabbitVersion}") {
+        exclude module:'spring-boot-starter-logging'
+    }
+
+    compile("org.springframework.boot:spring-boot-starter-log4j2:${springRabbitVersion}")
+}
